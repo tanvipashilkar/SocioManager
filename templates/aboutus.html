@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - SocioManager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f0f4f8, #e2e8f0);
+      overflow-x: hidden;
+    }
+
+    .about-container {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 3rem 2rem;
+      background-color: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: #1e3a8a;
+      margin-bottom: 2.5rem;
+    }
+
+    .about-section {
+      margin-bottom: 3rem;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s ease;
+    }
+
+    .about-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .about-section h2 {
+      font-size: 1.8rem;
+      border-left: 6px solid #3b82f6;
+      padding-left: 14px;
+      color: #0f172a;
+      margin-bottom: 1rem;
+    }
+
+    .about-section p {
+      font-size: 1.05rem;
+      color: #475569;
+      line-height: 1.8;
+      padding-left: 10px;
+    }
+
+    .about-section ul {
+      padding-left: 2rem;
+      line-height: 1.8;
+    }
+
+    .about-section ul li::before {
+      content: '✅';
+      margin-right: 10px;
+      color: #22c55e;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+
+    .cta a {
+      background-color: #ef4444;
+      color: white;
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #dc2626;
+      box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3);
+    }
+
+    /* Floating SVG Graphics */
+    .svg-deco {
+      position: absolute;
+      z-index: 0;
+      opacity: 0.1;
+    }
+
+    .svg1 {
+      top: -30px;
+      left: -30px;
+    }
+
+    .svg2 {
+      bottom: -30px;
+      right: -30px;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .about-container {
+        padding: 2rem 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .about-section h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SVG Background Graphics -->
+  <svg class="svg-deco svg1" width="200" height="200" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="100" fill="#3b82f6"/>
+  </svg>
+  <svg class="svg-deco svg2" width="200" height="200" viewBox="0 0 200 200">
+    <rect width="200" height="200" fill="#ef4444"/>
+  </svg>
+
+  <div class="about-container">
+    <h1>About SocioManager</h1>
+
+    <div class="about-section fade">
+      <h2>Who We Are</h2>
+      <p>
+        At SocioManager, we’re a cross-functional team of developers, designers, and marketers with a passion for solving digital challenges.
+        We created this platform to empower individuals, businesses, and content creators to streamline their social media presence with ease.
+      </p>
+    </div>
+
+    <div class="about-section fade">
+      <h2>Our Mission</h2>
+      <p>
+        We simplify social media scheduling and analytics through automation, insights, and innovation. Our mission is to eliminate time-consuming
+        tasks so you can focus on building meaningful connections with your audience and scaling your growth.
+      </p>
+    </div>
+
+    <div class="about-section fade">
+      <h2>Our Vision</h2>
+      <p>
+        To become the go-to platform for digital content management globally—where creators and brands thrive, collaborate, and succeed together.
+        We envision a future where content is no longer chaotic but cohesive, organized, and impactful.
+      </p>
+    </div>
+
+    <div class="about-section fade">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>Schedule content across all platforms with one click</li>
+        <li>Generate hashtags & captions using powerful AI</li>
+        <li>Get real-time performance metrics and growth insights</li>
+        <li>Collaborate with team members on campaigns</li>
+        <li>Manage drafts, approvals, and feedback seamlessly</li>
+        <li>Secure platform with OAuth integrations</li>
+        <li>No hidden fees – free trial with no credit card required</li>
+      </ul>
+    </div>
+
+    <div class="about-section fade">
+      <h2>Our Culture & Values</h2>
+      <p>
+        We believe in innovation, transparency, and user-first design. Our remote-first culture celebrates diversity and continuous improvement.
+        We listen to our users, test relentlessly, and build tools that empower people to do more with less effort.
+      </p>
+    </div>
+
+    <div class="cta">
+      <a href="/signup">Start Your Free Trial</a>
+    </div>
+  </div>
+
+  <script>
+    // Animate sections on scroll
+    const sections = document.querySelectorAll('.about-section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>

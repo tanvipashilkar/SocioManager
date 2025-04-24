@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SocioManager - Social Media Scheduler</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js">
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+    }
+
+    body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: rgb(13, 11, 11);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .wordart {
+      font-size: 28px;
+      font-weight: 700;
+      margin-right: 40px;
+      color: white;
+    }
+
+    .nav-links a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    .auth-buttons button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #ffffff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .try-free {
+      background-color: #ff4c60;
+      color: white;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 50px;
+    }
+
+    .hero-card {
+      max-width: 50%;
+    }
+
+    .hero-card h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero-card .stress {
+      color: #ff4c60;
+    }
+
+    .hero-card p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    #email-form input {
+      padding: 12px;
+      width: 300px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    #email-form button {
+      padding: 12px 20px;
+      background-color: #ff4c60;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .note {
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    .graphics img {
+      width: 500px;
+      max-width: 100%;
+    }
+
+    footer {
+      padding: 20px 50px;
+      background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .icons span {
+      font-size: 24px;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-left">
+        <h2 class="wordart">SocioManager</h2>
+        <div class="nav-links">
+          <a href="aboutus.html">About Us</a>
+          <a href="Integrations.html">Integrations</a>
+          <a href="dashboard.html">Scheduling</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+      </div>
+      <div class="auth-buttons">
+        <button class="login">Log In</button>
+        <button class="try-free">Try for Free</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-card" data-aos="fade-right" data-aos-duration="1000">
+      <h1><span class="stress">Stress-free</span> social media management</h1>
+      <p>Create and schedule content, collaborate with teams, and grow your audience with ease — all in one place.</p>
+      <form id="email-form" method="POST" action="/start-trial">
+        <input type="email" name="email" placeholder="Enter your email..." required />
+        <button type="submit">Start a Free Trial</button>
+        <p class="note">No credit card required!</p>
+      </form>  
+    </div>
+  </section>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

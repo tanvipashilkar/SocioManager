@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <link rel="stylesheet">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #0f172a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.duration-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    background-color: #1e293b;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+    margin: 0 auto 3rem;
+}
+
+.toggle-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0.375rem;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+    background-color: #3b82f6;
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: #1e293b;
+    border-radius: 1rem;
+    padding: 2rem;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.popular {
+    border: 2px solid #3b82f6;
+}
+
+.popular-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+}
+
+.card-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-header p {
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+}
+
+.price {
+    margin-bottom: 2rem;
+}
+
+.price h2 {
+    font-size: 2.25rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+}
+
+.billing-info {
+    color: #94a3b8;
+    font-size: 0.875rem;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.features li {
+    margin-bottom: 1rem;
+    color: #e2e8f0;
+}
+
+.cta-button {
+    width: 100%;
+    padding: 0.875rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2563eb;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem 1rem;
+    }
+    
+    .pricing-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose Your Plan</h1>
+        
+        <div class="duration-toggle">
+            <button class="toggle-btn active" data-duration="monthly">1 Month</button>
+            <button class="toggle-btn" data-duration="biannual">6 Months</button>
+            <button class="toggle-btn" data-duration="annual">1 Year</button>
+        </div>
+
+        <div class="pricing-cards">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Basic</h3>
+                    <p>Perfect for starters</p>
+                </div>
+                <div class="price">
+                    <h2><span class="amount">$29</span>/mo</h2>
+                    <p class="billing-info">billed monthly</p>
+                </div>
+                <ul class="features">
+                    <li>✓ 5 Social Profiles</li>
+                    <li>✓ 1 User</li>
+                    <li>✓ Basic Analytics</li>
+                    <li>✓ 48h Support Response</li>
+                    <li>✓ 10 Scheduled Posts</li>
+                </ul>
+                <button class="cta-button">Start Free Trial</button>
+            </div>
+
+            <div class="card popular">
+                <div class="popular-badge">Most Popular</div>
+                <div class="card-header">
+                    <h3>Professional</h3>
+                    <p>For growing businesses</p>
+                </div>
+                <div class="price">
+                    <h2><span class="amount">$49</span>/mo</h2>
+                    <p class="billing-info">billed monthly</p>
+                </div>
+                <ul class="features">
+                    <li>✓ 10 Social Profiles</li>
+                    <li>✓ 3 Users</li>
+                    <li>✓ Advanced Analytics</li>
+                    <li>✓ 24h Support Response</li>
+                    <li>✓ 50 Scheduled Posts</li>
+                    <li>✓ Custom Workflows</li>
+                </ul>
+                <button class="cta-button">Start Free Trial</button>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Business</h3>
+                    <p>For larger teams</p>
+                </div>
+                <div class="price">
+                    <h2><span class="amount">$99</span>/mo</h2>
+                    <p class="billing-info">billed monthly</p>
+                </div>
+                <ul class="features">
+                    <li>✓ 25 Social Profiles</li>
+                    <li>✓ 10 Users</li>
+                    <li>✓ Premium Analytics</li>
+                    <li>✓ Priority Support</li>
+                    <li>✓ Unlimited Posts</li>
+                    <li>✓ Advanced Workflows</li>
+                    <li>✓ Team Collaboration</li>
+                </ul>
+                <button class="cta-button">Start Free Trial</button>
+            </div>
+        </div>
+    </div>
+    <script src="static/pricing.js"></script>
+</body>
+</html>

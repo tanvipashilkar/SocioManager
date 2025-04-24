@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Media Integrations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f172a;
+      background-image: radial-gradient(circle at top left, #334155, #0f172a);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .integrations-section {
+      max-width: 1200px;
+      margin: 5rem auto;
+      padding: 3rem;
+      background-color: #f8fafc;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .integrations-section h2 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 3rem;
+      color: #1e293b;
+    }
+
+    .integrations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .integration-card {
+      background: #e2e8f0;
+      padding: 1.5rem;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .integration-card:hover {
+      transform: translateY(-8px);
+      background: #cbd5e1;
+    }
+
+    .integration-card i {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #1d4ed8;
+    }
+
+    .integration-card h4 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #1e293b;
+    }
+
+    .integration-card p {
+      font-size: 0.9rem;
+      color: #475569;
+      margin-bottom: 1rem;
+    }
+
+    .status {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+    .connected {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .not-connected {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .integration-card button {
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background-color: #1d4ed8;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+    }
+
+    .integration-card button:hover {
+      background-color: #2563eb;
+    }
+
+    @media (max-width: 768px) {
+      .integrations-section h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="integrations-section">
+    <h2>Social Media Integrations</h2>
+
+    <div class="integrations-grid">
+
+      <div class="integration-card">
+        <i class="fab fa-facebook-square"></i>
+        <h4>Facebook</h4>
+        <p>Schedule posts and manage pages directly.</p>
+        <span class="status connected">Connected</span><br>
+        <button>Disconnect</button>
+      </div>
+
+      <div class="integration-card">
+        <i class="fab fa-instagram"></i>
+        <h4>Instagram</h4>
+        <p>Auto-publish to feed, schedule reels and stories.</p>
+        <span class="status not-connected">Not Connected</span><br>
+        <button>Connect</button>
+      </div>
+
+      <div class="integration-card">
+        <i class="fab fa-linkedin"></i>
+        <h4>LinkedIn</h4>
+        <p>Post updates, track engagements for business pages.</p>
+        <span class="status connected">Connected</span><br>
+        <button>Disconnect</button>
+      </div>
+
+      <div class="integration-card">
+        <i class="fab fa-youtube"></i>
+        <h4>YouTube</h4>
+        <p>Manage video content and monitor channel analytics.</p>
+        <span class="status not-connected">Not Connected</span><br>
+        <button>Connect</button>
+      </div>
+
+      <div class="integration-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <h4>Google Business</h4>
+        <p>Keep your audience updated with posts and reviews.</p>
+        <span class="status connected">Connected</span><br>
+        <button>Disconnect</button>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
+

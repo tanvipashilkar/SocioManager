@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post Planning and Scheduling</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+  
+    .solutions-grid {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 1rem;
+    }
+  
+    .dashboard-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+  
+    .dashboard-card {
+      flex: 1 1 400px; /* Adjusted for a larger card */
+      background: #ffffff;
+      padding: 2rem; /* Increased padding */
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      width: 450px; /* Increased width */
+      height: 350px; /* Increased height */
+    }
+  
+    .dashboard-card h3 {
+      font-size: 1.5rem; /* Increased font size */
+      margin-bottom: 1rem;
+      color: #1e293b;
+    }
+  
+    .dashboard-card p {
+      font-size: 1rem; /* Increased font size */
+      color: #334155;
+      margin-bottom: 1rem;
+    }
+  
+    .primary-btn {
+      padding: 0.8rem 1.5rem; /* Adjusted button size */
+      background-color: #10b981;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+  
+    .primary-btn:hover {
+      background-color: #059669;
+    }
+  
+    .status-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .status-list li {
+      margin: 0.6rem 0;
+      display: flex;
+      align-items: center;
+      font-size: 1rem; /* Increased font size */
+      color: #475569;
+    }
+  
+    .status-list .dot {
+      display: inline-block;
+      width: 12px; /* Increased dot size */
+      height: 12px; /* Increased dot size */
+      border-radius: 50%;
+      margin-right: 0.8rem; /* Increased margin */
+    }
+  
+    .draft { background: #9ca3af; }
+    .pending { background: #fde68a; }
+    .edits { background: #fca5a5; }
+    .approved { background: #93c5fd; }
+    .scheduled { background: #a7f3d0; }
+    .published { background: #d1d5db; }
+  
+    .column {
+      background: #ffffff;
+      padding: 2rem; /* Increased padding */
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      width: 450px; /* Increased width */
+      height: auto; /* Set height to auto to fit content */
+    }
+  
+    .column h3 {
+      font-size: 1.5rem; /* Increased font size */
+      color: #1e293b;
+      margin-bottom: 1rem;
+    }
+  
+    .column ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      color: #475569;
+    }
+  
+    .column ul li {
+      margin-bottom: 0.6rem; /* Increased margin */
+    }
+  
+    .column ul a {
+      color: #10b981;
+      text-decoration: none;
+    }
+  
+    .column ul a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  
+
+  
+  
+</head>
+<body>
+
+  <section class="solutions-grid">
+
+    <!-- Dashboard cards -->
+    <div class="dashboard-section">
+
+      <div class="dashboard-card">
+        <h3>📅 Calendars</h3>
+        <p>You have not added any calendars yet! Add a new calendar to your account to start scheduling and streamline your process.</p>
+        <button class="primary-btn">Add New Calendar</button>
+      </div>
+
+      <div class="dashboard-card">
+        <h3>📊 Post Overview</h3>
+        <ul class="status-list">
+          <li><span class="dot draft"></span> Draft: 0</li>
+          <li><span class="dot pending"></span> Pending Approval: 0</li>
+          <li><span class="dot edits"></span> Requires Edits: 0</li>
+          <li><span class="dot approved"></span> Approved: 0</li>
+          <li><span class="dot scheduled"></span> Scheduled: 0</li>
+          <li><span class="dot published"></span> Published: 0</li>
+        </ul>
+      </div>
+
+      <div class="dashboard-card">
+        <h3>🔍 On the Radar</h3>
+        <p>Looks like there’s nothing on your radar! Create your first calendar to start making posts and see your content at a glance.</p>
+        <button class="primary-btn">Add New Calendar</button>
+      </div>
+
+    </div>
+
+    <!-- Columns -->
+    <div class="column">
+      <h3>📌 Social Media Solutions</h3>
+      <ul>
+        <li>Post Planning and Scheduling</li>
+        <li>Collaboration and Approvals</li>
+        <li>Content Calendar and Library</li>
+        <li><a href="#">See all features</a></li>
+      </ul>
+    </div>
+
+    <div class="column">
+      <h3>👥 Who Uses Loomly</h3>
+      <ul>
+        <li>Agencies & Freelancers</li>
+        <li>Brands & Creators</li>
+        <li>Marketing Teams</li>
+        <li>Franchises</li>
+        <li><a href="#">See all use cases</a></li>
+      </ul>
+    </div>
+
+  </section>
+
+</body>
+</html>
