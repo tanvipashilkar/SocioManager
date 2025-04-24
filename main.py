@@ -5,7 +5,7 @@ app.secret_key = 'your_secret_key'
 
 @app.route('/')
 def index():
-    return render_template('templates/main.html')
+    return render_template('main.html')
 
 @app.route('/start-trial', methods=['POST'])
 def start_trial():
